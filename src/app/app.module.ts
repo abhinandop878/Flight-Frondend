@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FormsModule } from '@angular/forms';
+import { ViewFlightComponent } from './view-flight/view-flight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddFlightComponent
+    AddFlightComponent,
+    ViewFlightComponent
   ],
   imports: [
     BrowserModule,
