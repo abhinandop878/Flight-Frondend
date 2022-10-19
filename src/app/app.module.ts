@@ -7,7 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FormsModule } from '@angular/forms';
 import { ViewFlightComponent } from './view-flight/view-flight.component';
-
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes:Routes=[
+  {
+    path:"",component:AddFlightComponent
+  },
+  {
+    path:"viewFlights",component:ViewFlightComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +26,8 @@ import { ViewFlightComponent } from './view-flight/view-flight.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
