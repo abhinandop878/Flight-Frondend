@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row ">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Flight name:</label>
+                    <input placeholder="Enter your Employee code"type="text" class="form-control" name="flightName" [(ngModel)]="flightName">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <br>
+                        <button class="btn btn-success" type="button"(click)="searchData()">Search</button>
+                    </div>
+                </div>
+                <div *ngFor="let i of data">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Flight Name</label>
+                        <input placeholder="Enter your Flight Name" type="text" class="form-control" value="{{i.flightName}}">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Origin</label>
+                        <input placeholder="Enter your Origin" type="text" class="form-control" value="{{i.origin}}" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Destination</label>
+                        <input placeholder="Enter your Destination" type="text" class="form-control" value="{{i.destination}}">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Capacity</label>
+                        <input placeholder="Enter your Capacity" type="text" class="form-control" value="{{i.capacity}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

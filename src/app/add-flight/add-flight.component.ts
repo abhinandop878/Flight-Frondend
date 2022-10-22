@@ -23,11 +23,11 @@ export class AddFlightComponent implements OnInit {
     this.myapi.addFlight(data).subscribe((response)=>{
       console.log(response)
       alert("Successfully Added!")
-      this.flightName=""
-      this.origin=""
-      this.destination=""
-      this.capacity=""
     })
+    this.flightName=""
+    this.origin=""
+    this.destination=""
+    this.capacity=""
   }
   ngOnInit(): void {
   }
